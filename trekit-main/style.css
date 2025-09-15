@@ -205,7 +205,11 @@
             background: linear-gradient(90deg, #2FAC66 0%, #4BC8EA 100%);
             border: none;
         }
-    
+        .logo img{
+        width: 7rem;
+        height: auto;
+    }
+
 
         /* Responsividade */
         @media (max-width: 576px) {
@@ -215,4 +219,5 @@
             .action-buttons {
                 flex-direction: column;
             }
+
         }
