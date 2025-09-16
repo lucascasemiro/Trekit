@@ -1,0 +1,321 @@
+/* --------- {Corpo do CSS} --------- */
+body {
+    background-color: #F2F8F3;
+    margin: auto;
+    font-family: 'Arial Narrow Bold', sans-serif;
+}
+
+/* --------- {Banner} --------- */
+.Container_Banner {
+    width: 90rem;
+    height: 60vh;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+}
+
+.Container_Banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --------- {Barra de pesquisa} --------- */
+.Barra_pesquisa_container {
+    display: flex;
+    justify-content: center;
+    margin: 3%;
+    margin-top: 10%;
+    position: relative;
+}
+
+.Barra_pesquisa_container input {
+    z-index: 0;
+    max-width: 90rem;
+    width: 60rem;
+    height: 3.5rem;
+    border-radius: 10px;
+    border: solid 0.5px #5B605C;
+    transition: border 0.1s ease-in-out;
+    outline: none;
+    font-size: 1rem;
+    padding-left: 2%;
+    box-sizing: border-box;
+    background-color: #F2F8F3;
+}
+
+.Barra_pesquisa_container input:hover {
+    border: solid 0.8px #4BC8EA;
+}
+
+.Barra_pesquisa_container button {
+    z-index: 1;
+    position: absolute;
+    right: 23.6%;
+    top: 15%;
+    background: linear-gradient(to left, #2FAC66, #4BC8EA);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 8%;
+    height: 70%;
+    transition: transform 0.3s ease, background 0.5s ease-in-out;
+    color: white;
+}
+
+.Barra_pesquisa_container button:hover {
+    transform: scale(1.03);
+    background: linear-gradient(to left, #38cc78, #42cdf3);
+    cursor: pointer;
+}
+
+/* --------- {Infos antes dos cards} --------- */
+.demonstracao_cards {
+    padding: 0% 8%;
+    width: 100%;
+}
+
+.demonstracao_cards h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #232624;
+    margin-top: 8%;
+}
+
+.demonstracao_cards p {
+    margin-top: -1%;
+    padding-bottom: 3%;
+}
+
+/* --------- {Container principal: filtros e cards} --------- */
+.Container_Search {
+    display: flex;
+    gap: 2rem;
+    padding: 0 8%;
+}
+
+/* --------- {Filtros à esquerda} --------- */
+.Container_Filtros {
+    background-color: #e2e8e4;
+    padding: 1.5rem;
+    border-radius: 16px;
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: 'Arial', sans-serif;
+}
+
+.btn-limpar-filtros {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-limpar-filtros img {
+    width: 20px;
+    height: 20px;
+}
+
+.Filtro_Nota p {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.Estrelas_Filtro img {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.2rem;
+    cursor: pointer;
+}
+
+.Filtro_Dropdown select,
+.Distancia_Inputs input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #5B605C;
+    background-color: #E2E8E4;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+}
+
+.Distancia_Inputs {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* --------- {Cards à direita} --------- */
+.Container_Cards_Search {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.CardTrilha {
+    max-width: 90rem;
+    width: 90%;
+    height: 30vh;
+    background-color: #E6EDE7;
+    border-radius: 32px; /* Mantendo maior que no segundo modelo */
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    margin-top: 2%;
+    transition: box-shadow 0.3s ease, cursor 1s ease;
+}
+
+.CardTrilha:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    cursor: pointer;
+}
+
+.CardTrilha img {
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 32px;
+    flex-shrink: 0;
+}
+
+/* Informações dentro do card */
+.Informacoes_Card {
+    padding: 1.5rem 2rem;
+    display: flex;
+    margin-left: 5%;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.Informacoes_Card h3 {
+    font-size: 1.8rem;
+    margin-top: 3%;
+    margin-bottom: 0;
+    color: #232624;
+}
+
+/* Avaliações e notas */
+.Notacao {
+    display: flex;
+    align-items: center;
+}
+
+.Notacao p {
+    font-size: 1rem;
+    color: #5B605C;
+    margin-right: 0.3rem;
+}
+
+.Notacao h4 {
+    font-size: 1.1rem;
+    color: #5B605C;
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+.Notacao img {
+    width: 25px;
+    height: 25px;
+    margin-right: 0.3rem;
+    margin-top: -0.3rem;
+}
+
+/* Informações rápidas */
+.infos_rapidas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.MiniInfoArea {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.MiniInfoArea img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+/* Botão de favorito */
+.botao_favorito {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 10;
+}
+
+.botao_favorito button {
+    background-color: transparent;
+    border-radius: 50%;
+    width: auto;
+    height: auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    box-shadow: none;
+    transition: transform 0.2s ease;
+}
+
+.botao_favorito button:hover {
+    transform: scale(1.1);
+}
+
+.botao_favorito button img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+/* --------- {Botões subir/descer} --------- */
+.Container_botoeslocomocao {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #E2E8E4;
+    width: 3rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    z-index: 9999;
+}
+
+.Container_botoeslocomocao .linha {
+    width: 60%;
+    border-bottom: 1px solid #888;
+}
+
+.Container_botoeslocomocao button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.Container_botoeslocomocao button img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+#rodape {
+    color: #E2E8E4;
+    margin: 1%;
+}

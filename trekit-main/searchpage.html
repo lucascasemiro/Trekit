@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Search</title>
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <!-- Botões de locomoção -->
+    <div class="Container_botoeslocomocao">
+        <button class="subir" id="btn-subir"> 
+            <img src="imagens/setacimaofc.svg" alt="seta para cima">
+        </button>
+        <div class="linha"></div>
+        <button class="descer" id="btn-descer">
+            <img src="imagens/setabaixoofc.svg" alt="seta para baixo">
+        </button>
+    </div>
+
+    <!-- Barra de pesquisa -->
+    <div class="Barra_pesquisa_container">
+        <input type="text" id="campo-pesquisa" placeholder="Pesquisa por trilhas, bairros...">
+        <button id="btn-pesquisar">Buscar</button>
+    </div>
+
+    <!-- Info antes dos cards -->
+    <div class="demonstracao_cards">
+        <h2>Buscando "Default":</h2>
+        <p>Exibindo 6 resultados</p>
+    </div>
+
+    <!-- Container principal: filtros à esquerda e cards à direita -->
+        <div class="Container_Search">
+
+            <!-- Área de filtros -->
+            <div class="Container_Filtros">
+                <button class="btn-limpar-filtros">
+                    <img src="imagens/limparfiltro_icone.svg" alt="Limpar filtro">
+                    Limpar filtros
+                </button>
+
+                <!-- Nota Triket -->
+                <div class="Filtro_Nota">
+                    <p>Nota Triket:</p>
+                    <div class="Estrelas_Filtro">
+                        <img src="/imagens/Star(prototipo).svg" alt="estrela">
+                        <img src="/imagens/Star(prototipo).svg" alt="estrela">
+                        <img src="/imagens/Star(prototipo).svg" alt="estrela">
+                        <img src="/imagens/Star(prototipo).svg" alt="estrela">
+                        <img src="/imagens/Star(prototipo).svg" alt="estrela">
+                    </div>
+                </div>
+
+                <!-- Dropdown Dificuldade -->
+                <div class="Filtro_Dropdown">
+                    <label for="dificuldade">Dificuldade:</label>
+                    <select id="dificuldade">
+                        <option value="" selected>Qualquer</option>
+                        <option value="facil">Fácil</option>
+                        <option value="intermediaria">Intermediária</option>
+                        <option value="dificil">Difícil</option>
+                        <option value="muito-dificil">Muito Difícil</option>
+                    </select>
+                </div>
+
+                <!-- Dropdown Bairro -->
+                <div class="Filtro_Dropdown">
+                    <label for="bairro">Bairro:</label>
+                    <select id="bairro">
+                        <option value="" selected>Qualquer</option>
+                        <option value="centro">Centro</option>
+                        <option value="lagoa">Sul</option>
+                        <option value="trindade">Norte</option>
+                        <option value="florianopolis">Centro-Norte</option>
+                    </select>
+                </div>
+
+                <!-- Distância -->
+                <div class="Filtro_Distancia">
+                    <label>Distância:</label>
+                    <div class="Distancia_Inputs">
+                        <input type="number" placeholder="Mín">
+                        <input type="number" placeholder="Máx">
+                    </div>
+                </div>
+
+                <!-- Sinalização -->
+                <div class="Filtro_Dropdown">
+                    <label for="sinalizacao">Sinalização:</label>
+                    <select id="sinalizacao">
+                        <option value="" selected>Qualquer</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Área de cards -->
+            <div class="Container_Cards_Search">
+                <!-- Card 1 -->
+                <div class="CardTrilha">
+                    <img src="imagens/Imagem_card_trilha.webp" alt="Trilha sem nome">
+                    <div class="Informacoes_Card">
+                        <h3>Trilha sem nome</h3>
+                        
+                        <div class="Notacao">
+                            <p>feita por <strong>Triket</strong></p>
+
+                            <img src="imagens/Star(prototipo).svg" alt="estrela">
+                            <img src="imagens/Star(prototipo).svg" alt="estrela">
+                            <img src="imagens/Star(prototipo).svg" alt="estrela">
+                            <img src="imagens/Star(prototipo).svg" alt="estrela">
+                            <img src="imagens/Star(prototipo).svg" alt="estrela">
+                        </div>
+                        <div class="infos_rapidas">
+                            <div class="MiniInfoArea">
+                                <img src="imagens/Localizacao_imagem.svg" alt="local">
+                                <p>Bairro, Florianópolis-SC</p>
+                            </div>
+                            <div class="MiniInfoArea">
+                                <img src="imagens/Corrida_icone.svg" alt="distância">
+                                <p>00.00 km</p>
+                            </div>
+                            <div class="MiniInfoArea">
+                                <img src="imagens/Sinalizacao_icone.svg" alt="sinalização">
+                                <p>Sim</p>
+                            </div>
+                            <div class="MiniInfoArea">
+                                <img src="imagens/Danger_icone.svg" alt="dificuldade">
+                                <p>Intermediária</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="botao_favorito">
+                        <button><img src="imagens/favorito_imgbotao.svg" alt="favorito"></button>
+                    </div>
+                </div>
+
+                <!-- Card 1 -->
+                <div class="CardTrilha">
+                    <img src="imagens/Imagem_card_trilha.webp" alt="Trilha sem nome">
+                    <div class="Informacoes_Card">
+                        <h3>Trilha sem nome</h3>
+                        
+                        <div class="Notacao">
+                            <p>feita por <strong>Triket</strong></p>
+
+                            <img src="imagens/Star(prototipo).svg" alt="estrela">
+                            <img src="imagens/Star(prototipo).svg" alt="estrela">
+                            <img src="imagens/Star(prototipo).svg" alt="estrela">
+                            <img src="imagens/Star(prototipo).svg" alt="estrela">
+                            <img src="imagens/Star(prototipo).svg" alt="estrela">
+                        </div>
+                        <div class="infos_rapidas">
+                            <div class="MiniInfoArea">
+                                <img src="imagens/Localizacao_imagem.svg" alt="local">
+                                <p>Bairro, Florianópolis-SC</p>
+                            </div>
+                            <div class="MiniInfoArea">
+                                <img src="imagens/Corrida_icone.svg" alt="distância">
+                                <p>00.00 km</p>
+                            </div>
+                            <div class="MiniInfoArea">
+                                <img src="imagens/Sinalizacao_icone.svg" alt="sinalização">
+                                <p>Sim</p>
+                            </div>
+                            <div class="MiniInfoArea">
+                                <img src="imagens/Danger_icone.svg" alt="dificuldade">
+                                <p>Intermediária</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="botao_favorito">
+                        <button><img src="imagens/favorito_imgbotao.svg" alt="favorito"></button>
+                    </div>
+                </div>
+
+                <!-- Card 1 -->
+                <div class="CardTrilha">
+                    <img src="imagens/Imagem_card_trilha.webp" alt="Trilha sem nome">
+                    <div class="Informacoes_Card">
+                        <h3>Trilha sem nome</h3>
+                        
+                        <div class="Notacao">
+                            <p>feita por <strong>Triket</strong></p>
+
+                            <img src="imagens/Star(prototipo).svg" alt="estrela">
+                            <img src="imagens/Star(prototipo).svg" alt="estrela">
+                            <img src="imagens/Star(prototipo).svg" alt="estrela">
+                            <img src="imagens/Star(prototipo).svg" alt="estrela">
+                            <img src="imagens/Star(prototipo).svg" alt="estrela">
+                        </div>
+                        <div class="infos_rapidas">
+                            <div class="MiniInfoArea">
+                                <img src="imagens/Localizacao_imagem.svg" alt="local">
+                                <p>Bairro, Florianópolis-SC</p>
+                            </div>
+                            <div class="MiniInfoArea">
+                                <img src="imagens/Corrida_icone.svg" alt="distância">
+                                <p>00.00 km</p>
+                            </div>
+                            <div class="MiniInfoArea">
+                                <img src="imagens/Sinalizacao_icone.svg" alt="sinalização">
+                                <p>Sim</p>
+                            </div>
+                            <div class="MiniInfoArea">
+                                <img src="imagens/Danger_icone.svg" alt="dificuldade">
+                                <p>Intermediária</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="botao_favorito">
+                        <button><img src="imagens/favorito_imgbotao.svg" alt="favorito"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <div id="rodape">a</div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
