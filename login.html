@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Trekit</title>
+    <link rel="stylesheet" href="logcad.css">
+</head>
+
+<body>
+    <div class="login-page">
+        <!-- Lado esquerdo -->
+        <div class="login-left"></div>
+
+        <!-- Lado direito -->
+        <div class="login-right">
+            <div class="login-box">
+                <img src="/imagens/logo.svg" alt="Trekit Logo" class="login-logo">
+
+                <h2>Bem-vindo(a) de volta</h2>
+
+                <form id="loginForm">
+                    <div class="input-icon">
+                        <input type="email" id="email" placeholder="E-mail" required>
+
+                    </div>
+
+                    <div class="input-icon">
+                        <input type="password" id="senhaLogin" placeholder="Senha" required>
+
+
+                    </div>
+
+                    <div class="remember">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Manter-me conectado</label>
+                    </div>
+
+                    <p id="erro" class="erro" style="display:none;"></p>
+
+                    <button type="submit" class="btn-login">Entrar</button>
+                </form>
+
+                <p class="signup-text">
+                    Não tem uma conta? <a href="index.html" class="link-cadastro">Cadastre-se</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="logcad.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Trekit</title>
+    <link rel="stylesheet" href="logcad.css">
+</head>
+
+<body>
+    <div class="register-container">
+        <div class="register-box">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="/imagens/logo.svg" alt="Trekit Logo">
+            </div>
+
+            <h2>Bem-vindo(a) ao Trekit</h2>
+
+            <form class="register-form" action="login.html" method="post">
+                <div class="input-icon">
+                    <input type="email" id="email" placeholder="E-mail" required>
+
+                </div>
+                <div class="input-icon">
+                    <input type="email" id="email" placeholder="E-mail" required>
+
+                </div>
+                <div class="input-icon">
+                    <input type="email" id="email" placeholder="E-mail" required>
+
+                </div>
+                <div class="input-icon">
+                    <input type="email" id="email" placeholder="E-mail" required>
+
+                </div>
+
+                <div class="terms">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">
+                        Eu li e concordo com os
+                        <span id="abrirModal" class="link-termos" style="cursor: pointer;">
+                            Termos e Condições de uso
+                        </span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-register">Cadastrar</button>
+            </form>
+
+            <p class="login-link">
+                Já tem uma conta? <a href="login.html" class="link-termos">Entre</a>
+            </p>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal-overlay" id="modal" style="display:none;">
+            <div class="modal-box">
+                <h3>Termos e Condições</h3>
+                <p>Luketas ama o Franchesco S2</p>
+                <button id="fecharModal">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="logcad.js"></script>
+</body>
+
+</html>

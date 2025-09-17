@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="editarPerfil.css">
+  
+</head>
+<body>
+    <header>
+        <a href="#" class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            Voltar
+        </a>
+        <div class="logo">
+            <img src="imagens/logo.svg" alt="">
+        </div>
+    </header>
+
+    <main>
+        <div class="form-content">
+            <div class="avatar-section">
+                <div class="avatar-wrapper">
+                    <img src="imagens/user-3296.svg" alt="Foto de Perfil" class="avatar-img">
+                    <button class="edit-avatar-btn">
+                        <img src="imagens/lapis.svg" alt="">                    
+                    </button>
+                </div>
+            </div>
+
+            <form id="profile-form">
+                <div class="form-fields">
+                    <div class="input-wrapper">
+                        <input type="text" id="nome" value="Nome Legal" class="form-input" readonly>
+                        <button type="button" class="edit-field-btn">
+                            <img src="imagens/lapis.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="text" id="username" value="@tananana" class="form-input" readonly>
+                        <button type="button" class="edit-field-btn">
+                            <img src="imagens/lapis.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="email" id="email" value="email@gmail.com" class="form-input" readonly>
+                        <button type="button" class="edit-field-btn">
+                           <img src="imagens/lapis.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="password" id="password" value="************" class="form-input" readonly>
+                        <button type="button" class="edit-field-btn">
+                            <img src="imagens/lapis.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button type="button" id="cancel-btn" class="btn btn-cancel">Cancelar</button>
+                    <button type="submit" class="btn btn-save">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('profile-form');
+            const editButtons = form.querySelectorAll('.edit-field-btn');
+            const inputs = form.querySelectorAll('input.form-input');
+            const cancelButton = document.getElementById('cancel-btn');
+
+            let originalValues = {};
+            inputs.forEach(input => {
+                originalValues[input.id] = input.value;
+            });
+
+            editButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const input = this.previousElementSibling;
+                    if (input && input.hasAttribute('readonly')) {
+                        input.removeAttribute('readonly');
+                        input.focus();
+                        input.setSelectionRange(input.value.length, input.value.length);
+                    }
+                });
+            });
+            
+            cancelButton.addEventListener('click', function() {
+                inputs.forEach(input => {
+                    input.value = originalValues[input.id];
+                    input.setAttribute('readonly', 'true');
+                });
+            });
+
+          
+
+        });
+    </script>
+
+</body>
+</html>
+
