@@ -24,6 +24,10 @@
 *::after {
     box-sizing: border-box;
 }
+input:focus {
+  outline: none;
+
+}
 
 body {
     background-color: #F2F8F3;
@@ -144,6 +148,7 @@ header {
     width: 100%;
     height: 35rem;
     object-fit: cover;
+    background-color: var(--light-gray);
 }
 
 /* --------- {Barra de pesquisa e Botão Adicionar} --------- */
@@ -172,6 +177,12 @@ header {
     font-size: 1rem;
     background-color: #F2F8F3;
 }
+.search_input_wrapper input:focus {
+            outline: none;
+            background-color: var(--light-white);
+    border: solid 0.5px var(--verde);
+            box-shadow: 0 0 0 0.2rem rgba(47, 172, 102, 0.25);
+        }
 
 .search_input_wrapper button {
     position: absolute;

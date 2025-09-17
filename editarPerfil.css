@@ -37,9 +37,6 @@
             font-family:'Vremena Grotesk';
             background-color: var(--light-white);
             color: var(--preto);
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
         }
 
         /* Header adaptado */

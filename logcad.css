@@ -333,3 +333,9 @@ input::placeholder{
   cursor: pointer;
   text-decoration: none;
 }
+input:focus {
+            outline: none;
+            background-color: var(--light-white);
+            border-color: var(--verde);
+            box-shadow: 0 0 0 0.2rem rgba(47, 172, 102, 0.25);
+        }

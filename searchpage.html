@@ -1,58 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style2.css">
-    <title>Search</title>
+    <link rel="stylesheet" href="style2.css"> <!-- Certifique-se de que este CSS é o que corrigimos -->
+    <title>Trekit - Buscar Trilhas</title>
 </head>
 <body>
     
     <!-- Navbar -->
-    <div id="navbar"></div>
-
-    <!-- Botões de locomoção -->
-    <div class="Container_botoeslocomocao">
-        <button class="subir" id="btn-subir"> 
-            <img src="imagens/setacimaofc.svg" alt="seta para cima">
+    <header>
+        <div class="logo">
+            <img src="imagens/logo.svg" alt="">
+        </div>
+        <!-- Botão Hambúrguer (para mobile) -->
+        <div class="nav_links" id="nav-links">
+            <div class="botoesnavcentrais">
+                <button class="botaonavbase">Explorar</button>
+                <button class="botaonavbase">Minhas Trilhas</button>
+            </div>
+<div class="perfil"></div>
+        </div>
+        <button class="hamburger_menu" id="hamburger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
-        <div class="linha"></div>
-        <button class="descer" id="btn-descer">
-            <img src="imagens/setabaixoofc.svg" alt="seta para baixo">
-        </button>
-    </div>
+    </header>
 
-    <!-- Barra de pesquisa -->
-    <div class="Barra_pesquisa_container">
-        <input type="text" id="campo-pesquisa" placeholder="Pesquisa por trilhas, bairros...">
-        <button id="btn-pesquisar">Buscar</button>
-    </div>
+    <main class="page-wrapper">
 
-    <!-- Info antes dos cards -->
-    <div class="demonstracao_cards">
-        <h2>Buscando "Default":</h2>
-        <p>Exibindo 6 resultados</p>
-    </div>
+        <!-- Barra de pesquisa e Botão Adicionar -->
+        <div class="Barra_pesquisa_container">
+            <div class="search_input_wrapper">
+                <input type="text" id="campo-pesquisa" placeholder="Pesquisa por trilhas, bairros...">
+                <button id="btn-pesquisar">Buscar</button>
+            </div>
+            <button class="btn_adicionar_trilha" id="btn-adicionar-trilha">+ Adicionar Trilha</button>
+        </div>
 
-    <!-- Container principal: filtros à esquerda e cards à direita -->
-        <div class="Container_Search">
+        <!-- Info antes dos cards -->
+        <section class="demonstracao_cards">
+            <h2>Buscando "Default":</h2>
+            <p>Exibindo 6 resultados</p>
+        </section>
 
-            <!-- Área de filtros -->
-            <div class="Container_Filtros">
+        <!-- Container principal: filtros à esquerda e cards à direita -->
+        <section class="Container_Search">
+
+        <!-- Área de filtros -->
+        <aside class="Container_Filtros" id="container-filtros">
+            <button class="btn-toggle-filtros" id="btn-toggle-filtros">
+                Filtrar
+            </button>
+
+            <!-- DIV QUE ENVOLVE E CONTROLA TODO O CONTEÚDO DOS FILTROS -->
+            <div class="filtros-content" id="filtros-content">
                 <button class="btn-limpar-filtros">
                     <img src="imagens/limparfiltro_icone.svg" alt="Limpar filtro">
                     Limpar filtros
                 </button>
 
-                <!-- Nota Triket -->
+                <!-- Nota Trekit -->
                 <div class="Filtro_Nota">
-                    <p>Nota Triket:</p>
+                    <p>Nota Trekit:</p>
                     <div class="Estrelas_Filtro">
-                        <img src="/imagens/Star(prototipo).svg" alt="estrela">
-                        <img src="/imagens/Star(prototipo).svg" alt="estrela">
-                        <img src="/imagens/Star(prototipo).svg" alt="estrela">
-                        <img src="/imagens/Star(prototipo).svg" alt="estrela">
-                        <img src="/imagens/Star(prototipo).svg" alt="estrela">
+                        <img src="imagens/Star(prototipo).svg" alt="estrela">
+                        <img src="imagens/Star(prototipo).svg" alt="estrela">
+                        <img src="imagens/Star(prototipo).svg" alt="estrela">
+                        <img src="imagens/Star(prototipo).svg" alt="estrela">
+                        <img src="imagens/Star(prototipo).svg" alt="estrela">
                     </div>
                 </div>
 
@@ -99,131 +116,94 @@
                     </select>
                 </div>
             </div>
+        </aside>
 
             <!-- Área de cards -->
-            <div class="Container_Cards_Search">
+            <div class="Container_CardsTrilhas">
+                
                 <!-- Card 1 -->
-                <div class="CardTrilha">
+                <article class="CardTrilha">
                     <img src="imagens/Imagem_card_trilha.webp" alt="Trilha sem nome">
                     <div class="Informacoes_Card">
                         <h3>Trilha sem nome</h3>
-                        
                         <div class="Notacao">
-                            <p>feita por <strong>Triket</strong></p>
-
-                            <img src="imagens/Star(prototipo).svg" alt="estrela">
-                            <img src="imagens/Star(prototipo).svg" alt="estrela">
-                            <img src="imagens/Star(prototipo).svg" alt="estrela">
-                            <img src="imagens/Star(prototipo).svg" alt="estrela">
-                            <img src="imagens/Star(prototipo).svg" alt="estrela">
+                            <p>feita por <strong>Trekit</strong></p>
+                            <!-- Estrelas -->
                         </div>
                         <div class="infos_rapidas">
-                            <div class="MiniInfoArea">
-                                <img src="imagens/Localizacao_imagem.svg" alt="local">
-                                <p>Bairro, Florianópolis-SC</p>
-                            </div>
-                            <div class="MiniInfoArea">
-                                <img src="imagens/Corrida_icone.svg" alt="distância">
-                                <p>00.00 km</p>
-                            </div>
-                            <div class="MiniInfoArea">
-                                <img src="imagens/Sinalizacao_icone.svg" alt="sinalização">
-                                <p>Sim</p>
-                            </div>
-                            <div class="MiniInfoArea">
-                                <img src="imagens/Danger_icone.svg" alt="dificuldade">
-                                <p>Intermediária</p>
-                            </div>
+                            <div class="MiniInfoArea"><img src="imagens/Localizacao_imagem.svg" alt="local"><p>Bairro, Florianópolis-SC</p></div>
+                            <div class="MiniInfoArea"><img src="imagens/Corrida_icone.svg" alt="distância"><p>00.00 km</p></div>
+                            <div class="MiniInfoArea"><img src="imagens/Sinalizacao_icone.svg" alt="sinalização"><p>Sim</p></div>
+                            <div class="MiniInfoArea"><img src="imagens/Danger_icone.svg" alt="dificuldade"><p>Intermediária</p></div>
                         </div>
                     </div>
                     <div class="botao_favorito">
                         <button><img src="imagens/favorito_imgbotao.svg" alt="favorito"></button>
                     </div>
-                </div>
+                </article>
 
-                <!-- Card 1 -->
-                <div class="CardTrilha">
+                <!-- Card 2 -->
+                <article class="CardTrilha">
                     <img src="imagens/Imagem_card_trilha.webp" alt="Trilha sem nome">
                     <div class="Informacoes_Card">
-                        <h3>Trilha sem nome</h3>
-                        
+                        <h3>Trilha da Lagoinha</h3>
                         <div class="Notacao">
-                            <p>feita por <strong>Triket</strong></p>
-
-                            <img src="imagens/Star(prototipo).svg" alt="estrela">
-                            <img src="imagens/Star(prototipo).svg" alt="estrela">
-                            <img src="imagens/Star(prototipo).svg" alt="estrela">
-                            <img src="imagens/Star(prototipo).svg" alt="estrela">
-                            <img src="imagens/Star(prototipo).svg" alt="estrela">
+                            <p>feita por <strong>Trekit</strong></p>
+                            <!-- Estrelas -->
                         </div>
                         <div class="infos_rapidas">
-                            <div class="MiniInfoArea">
-                                <img src="imagens/Localizacao_imagem.svg" alt="local">
-                                <p>Bairro, Florianópolis-SC</p>
-                            </div>
-                            <div class="MiniInfoArea">
-                                <img src="imagens/Corrida_icone.svg" alt="distância">
-                                <p>00.00 km</p>
-                            </div>
-                            <div class="MiniInfoArea">
-                                <img src="imagens/Sinalizacao_icone.svg" alt="sinalização">
-                                <p>Sim</p>
-                            </div>
-                            <div class="MiniInfoArea">
-                                <img src="imagens/Danger_icone.svg" alt="dificuldade">
-                                <p>Intermediária</p>
-                            </div>
+                            <div class="MiniInfoArea"><img src="imagens/Localizacao_imagem.svg" alt="local"><p>Pântano do Sul, Florianópolis-SC</p></div>
+                            <div class="MiniInfoArea"><img src="imagens/Corrida_icone.svg" alt="distância"><p>4.52 km</p></div>
+                            <div class="MiniInfoArea"><img src="imagens/Sinalizacao_icone.svg" alt="sinalização"><p>Não</p></div>
+                            <div class="MiniInfoArea"><img src="imagens/Danger_icone.svg" alt="dificuldade"><p>Difícil</p></div>
                         </div>
                     </div>
                     <div class="botao_favorito">
                         <button><img src="imagens/favorito_imgbotao.svg" alt="favorito"></button>
                     </div>
-                </div>
+                </article>
 
-                <!-- Card 1 -->
-                <div class="CardTrilha">
+                <!-- Card 3 -->
+                <article class="CardTrilha">
                     <img src="imagens/Imagem_card_trilha.webp" alt="Trilha sem nome">
                     <div class="Informacoes_Card">
-                        <h3>Trilha sem nome</h3>
-                        
+                        <h3>Trilha do Gravatá</h3>
                         <div class="Notacao">
-                            <p>feita por <strong>Triket</strong></p>
-
-                            <img src="imagens/Star(prototipo).svg" alt="estrela">
-                            <img src="imagens/Star(prototipo).svg" alt="estrela">
-                            <img src="imagens/Star(prototipo).svg" alt="estrela">
-                            <img src="imagens/Star(prototipo).svg" alt="estrela">
-                            <img src="imagens/Star(prototipo).svg" alt="estrela">
+                            <p>feita por <strong>Trekit</strong></p>
+                            <!-- Estrelas -->
                         </div>
                         <div class="infos_rapidas">
-                            <div class="MiniInfoArea">
-                                <img src="imagens/Localizacao_imagem.svg" alt="local">
-                                <p>Bairro, Florianópolis-SC</p>
-                            </div>
-                            <div class="MiniInfoArea">
-                                <img src="imagens/Corrida_icone.svg" alt="distância">
-                                <p>00.00 km</p>
-                            </div>
-                            <div class="MiniInfoArea">
-                                <img src="imagens/Sinalizacao_icone.svg" alt="sinalização">
-                                <p>Sim</p>
-                            </div>
-                            <div class="MiniInfoArea">
-                                <img src="imagens/Danger_icone.svg" alt="dificuldade">
-                                <p>Intermediária</p>
-                            </div>
+                            <div class="MiniInfoArea"><img src="imagens/Localizacao_imagem.svg" alt="local"><p>Praia Mole, Florianópolis-SC</p></div>
+                            <div class="MiniInfoArea"><img src="imagens/Corrida_icone.svg" alt="distância"><p>1.20 km</p></div>
+                            <div class="MiniInfoArea"><img src="imagens/Sinalizacao_icone.svg" alt="sinalização"><p>Sim</p></div>
+                            <div class="MiniInfoArea"><img src="imagens/Danger_icone.svg" alt="dificuldade"><p>Fácil</p></div>
                         </div>
                     </div>
                     <div class="botao_favorito">
                         <button><img src="imagens/favorito_imgbotao.svg" alt="favorito"></button>
                     </div>
-                </div>
+                </article>
+
             </div>
-        </div>
+        </section>
+
+    </main>
+
+    <!-- Cima baixo mover -->
+    <div class="Container_botoeslocomocao">
+        <button class="subir" id="btn-subir"> 
+            <img src="imagens/setacimaofc.svg" alt="seta para cima">
+        </button>
+        <div class="linha"></div>
+        <button class="descer" id="btn-descer">
+            <img src="imagens/setabaixoofc.svg" alt="seta para baixo">
+        </button>
     </div>
 
     <!-- Rodapé -->
-    <div id="rodape">a</div>
+    <footer id="rodape">
+        <p>© 2025 Trekit. Todos os direitos reservados.</p>
+    </footer>
 
     <script src="script.js"></script>
 

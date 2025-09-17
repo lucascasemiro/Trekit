@@ -1,79 +1,212 @@
-/* --------- {Corpo do CSS} --------- */
+@font-face {
+    font-family: 'Regular';
+    src: url('vremenagrotesk.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Vremena Grotesk';
+    src: url('vremenagroteskbold.ttf') format('truetype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Vremena Grotesk';
+    src: url('vremenagroteskmedium.ttf') format('truetype');
+    font-weight: 500;
+}
+        @font-face {
+    font-family: 'Vremena Grotesk';
+    src: url('vremenagroteskmedium.ttf') format('truetype');
+    font-weight: 500;
+}
+/* --------- {Reset e Configurações Globais} --------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+input:focus {
+  outline: none;
+}
+select:focus {
+  outline: none;
+}
 body {
     background-color: #F2F8F3;
-    margin: auto;
-    font-family: 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    font-family: 'Regular';
 }
-
-/* --------- {Banner} --------- */
-.Container_Banner {
-    width: 90rem;
-    height: 60vh;
-    overflow: hidden;
-    margin: auto;
-    margin-top: 1%;
+:root {
+    --verde: #2FAC66;
+    --preto: #232624;
+    --light-white: #F2F8F3;
+    --light-gray: #EAF0EB;
+    --border-color: #5B605C;
+}
+/* --------- {Navbar} --------- */
+header {
+    background-color: var(--light-white);
     display: flex;
-    justify-content: center;
-}
-
-.Container_Banner img {
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 8.5rem;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    top: 0;
+    position: fixed;
+    background-color: #F2F8F3;
+    z-index: 1000;
 }
 
-/* --------- {Barra de pesquisa} --------- */
+.navbar_inner {
+    width: 100%;
+    max-width: 105rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/* Container principal para os botões */
+.nav_links {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; 
+}
+
+.botoesnavcentrais {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    margin: 0 auto;
+    padding-left:8rem;
+}
+
+.botoesnavlogin {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.botaonavbase {
+    font-family: 'Regular';
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #383D39;
+    cursor: pointer;
+    padding: 0;
+}
+
+.botaologar {
+    background-color: var(--verde);
+    color: var(--light-white);
+    border: none;
+    padding: 0.6rem 1.8rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: 'Regular';
+}
+
+/* Botão Hambúrguer (escondido no desktop) */
+.hamburger_menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.hamburger_menu span {
+    width: 2rem;
+    height: 0.25rem;
+    background: #232624;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+
+/* --------- {Wrapper Central} --------- */
+.page-wrapper {
+    width: 100%;
+    max-width: 105rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+
+/* --------- {Barra de pesquisa e Botão Adicionar} --------- */
 .Barra_pesquisa_container {
     display: flex;
     justify-content: center;
-    margin: 3%;
-    margin-top: 10%;
-    position: relative;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 12rem;
 }
 
-.Barra_pesquisa_container input {
-    z-index: 0;
-    max-width: 90rem;
-    width: 60rem;
+.search_input_wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 60rem;
+}
+
+.search_input_wrapper input {
+    width: 100%;
     height: 3.5rem;
     border-radius: 10px;
     border: solid 0.5px #5B605C;
-    transition: border 0.1s ease-in-out;
-    outline: none;
+    padding-right: 8rem;
+    padding-left: 2rem;
     font-size: 1rem;
-    padding-left: 2%;
-    box-sizing: border-box;
     background-color: #F2F8F3;
 }
 
-.Barra_pesquisa_container input:hover {
-    border: solid 0.8px #4BC8EA;
-}
-
-.Barra_pesquisa_container button {
-    z-index: 1;
+.search_input_wrapper button {
     position: absolute;
-    right: 23.6%;
-    top: 15%;
-    background: linear-gradient(to left, #2FAC66, #4BC8EA);
+    font-size: 1rem;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80%;
+    width: 7rem;
+    border-radius: 8px;
+    font-family: 'Regular';
+    background: linear-gradient(to left, var(--verde), #4BC8EA);
+    color: var(--light-white);
     border: none;
-    outline: none;
-    border-radius: 5px;
-    width: 8%;
-    height: 70%;
-    transition: transform 0.3s ease, background 0.5s ease-in-out;
-    color: white;
-}
-
-.Barra_pesquisa_container button:hover {
-    transform: scale(1.03);
-    background: linear-gradient(to left, #38cc78, #42cdf3);
     cursor: pointer;
 }
 
+.btn_adicionar_trilha {
+    height: calc(3.5rem * 0.8);
+    padding: 0 1.5rem;
+    background-color: var(--verde);
+    color: var(--light-white);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-family: 'Regular';
+}
+
+
 /* --------- {Infos antes dos cards} --------- */
 .demonstracao_cards {
-    padding: 0% 8%;
     width: 100%;
 }
 
@@ -93,19 +226,23 @@ body {
 .Container_Search {
     display: flex;
     gap: 2rem;
-    padding: 0 8%;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 2%;
 }
 
 /* --------- {Filtros à esquerda} --------- */
 .Container_Filtros {
     background-color: #e2e8e4;
     padding: 1.5rem;
-    border-radius: 16px;
+    border-radius: 1rem;
     width: 18rem;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     font-family: 'Arial', sans-serif;
+    flex-shrink: 0;
 }
 
 .btn-limpar-filtros {
@@ -116,186 +253,192 @@ body {
     background: none;
     cursor: pointer;
     font-weight: bold;
+    font-family: 'Regular';
 }
 
 .btn-limpar-filtros img {
-    width: 20px;
-    height: 20px;
+    width: 1.25rem; 
+    height: 1.25rem; 
+    font-family: 'Regular';
 }
 
 .Filtro_Nota p {
     font-weight: bold;
     margin-bottom: 0.5rem;
+    font-family: 'Regular';
 }
 
 .Estrelas_Filtro img {
-    width: 20px;
-    height: 20px;
+    width: 1.25rem; 
+    height: 1.25rem; 
     margin-right: 0.2rem;
     cursor: pointer;
+    margin-bottom: 1rem;
 }
 
 .Filtro_Dropdown select,
 .Distancia_Inputs input {
     width: 100%;
+    margin-bottom: 1rem;
     padding: 0.5rem;
-    border-radius: 8px;
-    border: 1px solid #5B605C;
+    border-radius: 0.5rem;
+    border: 0.0625rem solid #5B605C;
     background-color: #E2E8E4;
     font-size: 0.95rem;
     box-sizing: border-box;
+    font-family: 'Regular';
 }
 
 .Distancia_Inputs {
     display: flex;
     gap: 0.5rem;
 }
+label{
+    font-family: 'Regular';
+}
 
-/* --------- {Cards à direita} --------- */
-.Container_Cards_Search {
+/* --------- {Container dos Cards à direita} --------- */
+.Container_CardsTrilhas {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    align-items: center;
 }
 
 .CardTrilha {
+    width: 100%;
     max-width: 90rem;
-    width: 90%;
-    height: 30vh;
+    height: 17rem;
     background-color: #E6EDE7;
-    border-radius: 32px; /* Mantendo maior que no segundo modelo */
+    border-radius: 1.25rem;
     display: flex;
     position: relative;
     overflow: hidden;
-    margin-top: 2%;
-    transition: box-shadow 0.3s ease, cursor 1s ease;
-}
-
-.CardTrilha:hover {
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    margin-bottom: 2rem;
     cursor: pointer;
 }
 
 .CardTrilha img {
-    width: 30%;
     height: 100%;
+    width: 30%;
     object-fit: cover;
-    border-radius: 32px;
+    border-radius: 1.25rem;
     flex-shrink: 0;
 }
 
-/* Informações dentro do card */
 .Informacoes_Card {
-    padding: 1.5rem 2rem;
+    padding: 2rem;
     display: flex;
-    margin-left: 5%;
+    margin-left: 2rem;
     flex-direction: column;
     justify-content: space-between;
     flex-grow: 1;
 }
 
 .Informacoes_Card h3 {
-    font-size: 1.8rem;
-    margin-top: 3%;
-    margin-bottom: 0;
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin: 0;
     color: #232624;
 }
 
-/* Avaliações e notas */
-.Notacao {
-    display: flex;
-    align-items: center;
+/* ... (restante das suas regras de card) ... */
+.Notacao { 
+    display: flex; 
+    align-items: center; 
+    margin-top: -0.8rem; 
 }
 
-.Notacao p {
-    font-size: 1rem;
-    color: #5B605C;
-    margin-right: 0.3rem;
+.Notacao p { 
+    font-size: 1rem; 
+    color: #5B605C; 
+    margin-right: 0.3rem; 
+    font-weight: 300; 
 }
 
-.Notacao h4 {
-    font-size: 1.1rem;
-    color: #5B605C;
-    margin-right: 0.5rem;
-    font-weight: bold;
+.Notacao h4 { 
+    font-size: 1rem; 
+    color: #5B605C; 
+    margin-right: 0.5rem; 
+    font-weight: 400; 
 }
 
-.Notacao img {
-    width: 25px;
-    height: 25px;
-    margin-right: 0.3rem;
-    margin-top: -0.3rem;
+.Notacao img { 
+    width: 1.5625rem; 
+    height: 1.5625rem; 
+    margin-right: 0.3rem; 
+    margin-top: -0.3rem; 
+    border-radius: 0; 
 }
 
-/* Informações rápidas */
-.infos_rapidas {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin-top: 0.5rem;
+.infos_rapidas { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 2rem; margin-top: auto; 
+    margin-bottom: 1rem; 
 }
 
-.MiniInfoArea {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
+.MiniInfoArea { 
+    display: flex; 
+    align-items: center; 
 }
 
-.MiniInfoArea img {
-    width: 25px;
-    height: 25px;
-    object-fit: contain;
+.MiniInfoArea img { 
+    width: 1.5625rem; 
+    height: 1.5625rem; 
+    margin-right: 0.5rem; 
+    object-fit: contain; 
+    border-radius: 0; 
 }
 
-/* Botão de favorito */
-.botao_favorito {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    z-index: 10;
+.MiniInfoArea p { 
+    font-size: 1.1rem; 
+    color: #232426; 
+    margin: 0; 
 }
 
-.botao_favorito button {
-    background-color: transparent;
-    border-radius: 50%;
-    width: auto;
-    height: auto;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    cursor: pointer;
-    box-shadow: none;
-    transition: transform 0.2s ease;
+.botao_favorito { 
+    position: absolute; 
+    top: 2rem; right: 
+    2rem; z-index: 10; 
 }
 
-.botao_favorito button:hover {
-    transform: scale(1.1);
+.botao_favorito button { 
+    background-color: transparent; 
+    border-radius: 50%; 
+    width: auto; 
+    height: auto; 
+    padding: 0; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    border: none; 
+    cursor: pointer; 
+    box-shadow: none; 
 }
 
-.botao_favorito button img {
-    width: 35px;
-    height: 35px;
-    object-fit: contain;
+.botao_favorito button img { 
+    width: 2.1875rem; 
+    height: 2.1875rem; 
+    object-fit: contain; 
+    border-radius: 0; 
 }
 
-/* --------- {Botões subir/descer} --------- */
+/* --------- {Elementos Fixos e Rodapé} --------- */
 .Container_botoeslocomocao {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
     background-color: #E2E8E4;
     width: 3rem;
-    height: 8rem;
+    height: 7rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    border-radius: 0.5rem;
     z-index: 9999;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 
 .Container_botoeslocomocao .linha {
@@ -316,6 +459,179 @@ body {
 }
 
 #rodape {
-    color: #E2E8E4;
-    margin: 1%;
+    background-color: #E2E8E4;
+    width: 100%;
+    height: 7rem;
+    font-size: 0.8rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #232624;
+    margin-top: 5rem;
+}
+
+#rodape span {
+    color: var(--verde);
+    margin-left: 1rem;
+    cursor: pointer;
+}
+.perfil{
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--verde);
+    border-radius: 1000rem;
+}
+/* --------- {INÍCIO DA RESPONSIVIDADE} --------- */
+.btn-toggle-filtros {
+    display: none;
+}
+
+/* --------- {Para tablets e celulares na vertical} --------- */
+@media (max-width: 768px) {
+    .page-wrapper {
+        padding: 0 1rem;
+    }
+
+    .Container_Search {
+        flex-direction: column;
+    }
+
+    .Container_Filtros {
+        width: 100%;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    /* Mostra e estiliza o botão "Filtrar" no responsivo */
+    .btn-toggle-filtros {
+        display: flex;
+        width: 100%;
+        padding: 1rem;
+        background-color: #e2e8e4;
+        border-radius: 1rem;
+        border: none;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        font-family: 'Arial', sans-serif;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    /* Por padrão no responsivo, o conteúdo dos filtros fica escondido */
+    .filtros-content {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: #e2e8e4;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        margin-top: 1rem;
+    }
+
+    /* Classe que o JS vai adicionar para MOSTRAR o conteúdo */
+    .Container_Filtros.filtros-visiveis .filtros-content {
+        display: flex;
+    }
+
+    /* Esconde o botão "Filtrar" quando o filtro já está aberto */
+    .Container_Filtros.filtros-visiveis .btn-toggle-filtros {
+        display: none;
+    }
+    
+    .botoesnavcentrais {
+        padding-left: 0;
+    }
+}
+
+/* --------- {Para celulares pequenos} --------- */
+@media (max-width: 480px) {
+
+    .navbar_inner { padding: 0 1rem; }
+    header { padding: 1rem 0; }
+    .hamburger_menu { display: flex; }
+    .nav_links { display: none; flex-direction: column; align-items: center; gap: 2rem; padding: 2rem; background-color: #F2F8F3; position: absolute; top: 100%; left: 0; width: 100%; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+    .nav_links.active { display: flex; }
+    .botoesnavcentrais, .botoesnavlogin { flex-direction: column; align-items: center; gap: 1.5rem; margin: 0; padding: 0; }
+
+
+    /* --------- {Barra de Pesquisa e Botão Adicionar} --------- */
+    .Barra_pesquisa_container {
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 8rem;
+    }
+
+    .search_input_wrapper button {
+        width: 5.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .btn_adicionar_trilha {
+        width: 100%;
+        height: 3.5rem;
+    }
+    
+    /* --------- {Layout dos Cards} --------- */
+    .demonstracao_cards {
+        margin-top: 3rem;
+    }
+    
+    .demonstracao_cards h2 {
+        font-size: 1.5rem;
+    }
+    
+    .Container_CardsTrilhas{
+        align-items: center;
+    }
+
+    .CardTrilha {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+
+    .CardTrilha img {
+        width: 100%;
+        height: 12rem;
+        border-radius: 1.25rem 1.25rem 0 0;
+    }
+
+    .Informacoes_Card {
+        margin-left: 0;
+        padding: 1rem 1.5rem;
+        gap: 1rem;
+    }
+
+    .Informacoes_Card h3 {
+        font-size: 1.4rem;
+    }
+    
+    .botao_favorito {
+        top: 1rem;
+        right: 1rem;
+    }
+
+    /* --------- {Detalhes dos Cards} --------- */
+    .infos_rapidas {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+        margin-top: 0;
+    }
+
+    .MiniInfoArea img, .Notacao img {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
+    .MiniInfoArea p {
+        font-size: 0.9rem;
+    }
+
+    /* --------- {Botões de Subir/Descer} --------- */
+    .Container_botoeslocomocao {
+        display: none;
+    }
 }
