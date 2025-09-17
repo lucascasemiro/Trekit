@@ -27,6 +27,7 @@
 input:focus {
   outline: none;
 }
+
 select:focus {
   outline: none;
 }
@@ -34,6 +35,7 @@ body {
     background-color: #F2F8F3;
     margin: 0;
     font-family: 'Regular';
+    color: var(--preto);
 }
 :root {
     --verde: #2FAC66;
@@ -254,6 +256,7 @@ header {
     cursor: pointer;
     font-weight: bold;
     font-family: 'Regular';
+    margin-bottom: 3.5rem;
 }
 
 .btn-limpar-filtros img {
@@ -438,7 +441,6 @@ label{
     align-items: center;
     border-radius: 0.5rem;
     z-index: 9999;
-    box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 
 .Container_botoeslocomocao .linha {
@@ -485,6 +487,23 @@ label{
 /* --------- {INÍCIO DA RESPONSIVIDADE} --------- */
 .btn-toggle-filtros {
     display: none;
+}
+#rodape{
+background-color: #E2E8E4;
+width: 100%;
+height: 7rem;
+font-size: 0.8rem;
+font-weight: 300;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #232624;
+margin-top: 23rem;
+}
+span{
+    color: var(--verde);
+    margin-left: 1rem;
+    cursor: pointer;
 }
 
 /* --------- {Para tablets e celulares na vertical} --------- */

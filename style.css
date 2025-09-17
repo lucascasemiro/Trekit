@@ -28,6 +28,11 @@ input:focus {
   outline: none;
 
 }
+input{
+    font-family: 'Regular';
+    font-weight: 200;
+    color: var(--preto);
+}
 
 body {
     background-color: #F2F8F3;

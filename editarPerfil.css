@@ -37,6 +37,7 @@
             font-family:'Vremena Grotesk';
             background-color: var(--light-white);
             color: var(--preto);
+            margin: 0;
         }
 
         /* Header adaptado */
@@ -86,6 +87,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+              margin-top: 3rem;
         }
 
         /* Avatar */

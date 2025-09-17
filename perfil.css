@@ -30,10 +30,11 @@
 body {
                 font-family: 'Vremena Grotesk';
   background-color: var(--light-white);
+  margin: 0;
 }
 
 .container {
-  max-width: 70.5rem; /* 1128px */
+  max-width: 80.5rem; /* 1128px */
   margin: 0 auto;
   padding: 0 1.5rem; /* 24px */
 }
@@ -42,7 +43,7 @@ body {
             background-color: var(--light-white);
             display: flex;
             justify-content: space-between;
-            padding: 1rem 8rem;
+            padding: 1.5rem 8.5rem;
         }
 
         .back-link {
@@ -76,13 +77,15 @@ body {
   align-items: flex-start;
   gap: 1.5rem; /* 24px */
   flex: 1;
+  margin-top: 2rem;
 }
 
 .profile-avatar {
-  width: 8rem; /* 128px */
-  height: 8rem; /* 128px */
+  width: 10rem; /* 128px */
+  height: 10rem; /* 128px */
   border-radius: 50%;
   object-fit: cover;
+  align-self: center;
 }
 
 .profile-info h1 {
@@ -90,9 +93,14 @@ body {
   margin: 0 0 0.25rem 0; /* 4px */
   color: var(--preto);
 }
+.profile-info{
+    margin-left: 1rem;
+}
 
 .profile-username {
-  color: var(--verde);
+    font-weight: 200;
+    margin-top: 0rem;
+    color: #5B605C;
   font-size: 1rem; /* 16px */
   margin-bottom: 0.75rem; /* 12px */
 }
@@ -117,15 +125,20 @@ body {
   font-size: 0.875rem; /* 14px */
   cursor: pointer;
   border: none;
+  font-family: 'Vremena Grotesk';
 
 }
 
-.btn-green {
-  background-color: var(--verde);
-  color: var(--light-white);
-  border: none;
+.btn-primary{
+    background-color: #2FAC66;
+    color: var(--light-white);
+    text-align: center;
+    border-radius: 0.5rem;
 }
-
+.btn-secondary{
+    background-color:var(--light-white);
+    text-align: center;
+}
 .profile-stats {
   display: flex;
   gap: 3rem; /* 48px */
@@ -146,6 +159,7 @@ body {
 .stat-label {
   font-size: 0.75rem; /* 12px */
   color: var(--preto);
+  color: var(--border-color);
 }
 
 .trails {
@@ -257,7 +271,183 @@ body {
   background-color: var(--verde);
   width: 50%;
 }
+.Container_CardsTrilhas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2% 0;
+    width: 100%;
+}
 
+.CardTrilha {
+    max-width: 90rem;
+    width: 90%;
+    height: 15rem;
+    background-color: #E6EDE7;
+    border-radius: 20px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    margin-top: 2rem;
+    transition: cursor ease 1s;
+}
+
+.CardTrilha img {
+    height: 100%;
+    width: 30%;
+    object-fit: cover;
+    border-radius: 20px;
+    flex-shrink: 0;
+}
+
+.botao_favorito {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 10;
+}
+
+.botao_favorito button {
+    background-color: transparent;
+    border-radius: 50%;
+    width: auto;
+    height: auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    box-shadow: none;
+    transition: transform 0.2s ease;
+}
+
+.botao_favorito button img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    border-radius: 0;
+}
+
+.Informacoes_Card {
+    padding: 2rem 2rem;
+    display: flex;
+    margin-left: 5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.Informacoes_Card h3 {
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-top: 0rem;
+    margin-bottom: 0;
+    color: #232624;
+}
+
+.Notacao {
+    display: flex;
+    align-items: center;
+    margin-top: -0.8rem;
+}
+
+.Notacao p {
+    font-size: 1rem;
+    color: #5B605C;
+    margin-right: 0.3rem;
+    font-weight: 300;
+}
+
+.Notacao h4 {
+    font-size: 1rem;
+    color: #5B605C;
+    margin-right: 0.5rem;
+    font-weight: 400;
+}
+
+.Notacao img {
+    width: 25px;
+    height: 25px;
+    margin-right: 0.3rem;
+    margin-top: -0.3rem;
+}
+
+.infos_rapidas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: auto;
+    margin-bottom: 2rem;
+}
+
+.MiniInfoArea {
+    display: flex;
+    align-items: center;
+}
+
+.MiniInfoArea img {
+    width: 25px;
+    height: 25px;
+    margin-right: 0.5rem;
+    object-fit: contain;
+    border-radius: 0;
+}
+
+.MiniInfoArea p {
+    font-size: 1.1rem;
+    color: #232624;
+    margin: 0;
+}
+
+.demonstracao_cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+    max-width: 105rem;
+    margin: 0 auto;
+    padding: 3rem 0rem 0rem;
+}
+
+.demonstracao_cards h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #232624;
+    margin: 0;
+    margin-top: 3rem;
+    white-space: nowrap;
+}
+
+.demonstracao_cards button {
+    flex-shrink: 0;
+    min-width: 8rem;
+    height: 1.6rem;
+    padding: 0.4rem 1rem;
+    font-size: large;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+#rodape{
+background-color: #E2E8E4;
+width: 100%;
+height: 7rem;
+font-size: 0.8rem;
+font-weight: 300;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #232624;
+margin-top: 23rem;
+}
+span{
+    color: var(--verde);
+    margin-left: 1rem;
+    cursor: pointer;
+}
 @media (max-width: 48rem) { /* 768px */
   .profile {
     flex-direction: column;
