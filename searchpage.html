@@ -57,7 +57,7 @@
             <!-- DIV QUE ENVOLVE E CONTROLA TODO O CONTEÚDO DOS FILTROS -->
             <div class="filtros-content" id="filtros-content">
                 <button class="btn-limpar-filtros">
-                    <img src="imagens/limparfiltro_icone.svg" alt="Limpar filtro">
+                    <img src="imagens/clean_filter.svg" alt="Limpar filtro">
                     Limpar filtros
                 </button>
 
@@ -69,27 +69,23 @@
                     <select id="dificuldade">
                         <option value="" selected>Qualquer</option>
                         <option value="facil">Fácil</option>
-                        <option value="intermediaria">Intermediária</option>
+                        <option value="moderado">Moderado</option>
                         <option value="dificil">Difícil</option>
                         <option value="muito-dificil">Muito Difícil</option>
                     </select>
                 </div>
 
                 <!-- Dropdown Bairro -->
-                <div class="Filtro_Dropdown">
-                    <label for="bairro">Bairro:</label>
-                    <select id="bairro">
-                        <option value="" selected>Qualquer</option>
-                        <option value="centro">Centro</option>
-                        <option value="lagoa">Sul</option>
-                        <option value="trindade">Norte</option>
-                        <option value="florianopolis">Centro-Norte</option>
-                    </select>
+                <div class="Filtro_Distancia">
+                    <label for="distancia">Bairro</label>
+                    <div class="Distancia_Inputs">
+                        <input type="text" placeholder="Qualquer">
+                    </div>
                 </div>
 
                 <!-- Distância -->
                 <div class="Filtro_Distancia">
-                    <label>Distância:</label>
+                    <label for="distancia">Distância:</label>
                     <div class="Distancia_Inputs">
                         <input type="number" placeholder="Mín">
                         <input type="number" placeholder="Máx">
@@ -102,6 +98,8 @@
                     <select id="sinalizacao">
                         <option value="" selected>Qualquer</option>
                         <option value="sim">Sim</option>
+                        <option value="muito">Muito</option>
+                        <option value="pouco">Pouco</option>
                         <option value="nao">Não</option>
                     </select>
                 </div>

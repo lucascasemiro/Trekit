@@ -26,8 +26,13 @@
 }
 input:focus {
   outline: none;
-}
 
+}
+input{
+    font-family: 'Regular';
+    font-weight: 200;
+    color: var(--preto);
+}
 select:focus {
   outline: none;
 }
@@ -257,6 +262,7 @@ header {
     font-weight: bold;
     font-family: 'Regular';
     margin-bottom: 3.5rem;
+    font-weight: 400;
 }
 
 .btn-limpar-filtros img {
@@ -287,9 +293,11 @@ header {
     border-radius: 0.5rem;
     border: 0.0625rem solid #5B605C;
     background-color: #E2E8E4;
+    color: var(--preto);
     font-size: 0.95rem;
     box-sizing: border-box;
     font-family: 'Regular';
+    margin-top: 0.2rem;
 }
 
 .Distancia_Inputs {
@@ -299,6 +307,7 @@ header {
 label{
     font-family: 'Regular';
 }
+
 
 /* --------- {Container dos Cards à direita} --------- */
 .Container_CardsTrilhas {
@@ -311,7 +320,7 @@ label{
 .CardTrilha {
     width: 100%;
     max-width: 90rem;
-    height: 17rem;
+    height: 15rem;
     background-color: #E6EDE7;
     border-radius: 1.25rem;
     display: flex;
@@ -399,7 +408,10 @@ label{
     color: #232426; 
     margin: 0; 
 }
-
+p {
+    color: var(--border-color);
+    font-weight: 400;
+}
 .botao_favorito { 
     position: absolute; 
     top: 2rem; right: 

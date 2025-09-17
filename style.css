@@ -24,6 +24,7 @@
 *::after {
     box-sizing: border-box;
 }
+
 input:focus {
   outline: none;
 
@@ -31,7 +32,7 @@ input:focus {
 input{
     font-family: 'Regular';
     font-weight: 200;
-    color: var(--preto);
+    color: var;
 }
 
 body {
@@ -182,12 +183,7 @@ header {
     font-size: 1rem;
     background-color: #F2F8F3;
 }
-.search_input_wrapper input:focus {
-            outline: none;
-            background-color: var(--light-white);
-    border: solid 0.5px var(--verde);
-            box-shadow: 0 0 0 0.2rem rgba(47, 172, 102, 0.25);
-        }
+
 
 .search_input_wrapper button {
     position: absolute;
@@ -253,6 +249,7 @@ header {
     max-width: 105rem;
     margin: 0 auto;
     padding: 3rem 2rem 0rem;
+    margin-top: 7rem;
 }
 
 .demonstracao_cards h2 {

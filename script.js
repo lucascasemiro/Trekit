@@ -20,7 +20,30 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.getElementById('nav-links');
 
     hamburgerBtn.addEventListener('click', function() {
-        // Alterna a classe 'active' no container dos links
         navLinks.classList.toggle('active');
     });
+});
+
+// abrir e fechar botão filtrar
+document.addEventListener('DOMContentLoaded', function() {
+
+    const toggleButton = document.getElementById('btn-toggle-filtros');
+    const filtrosContainer = document.getElementById('container-filtros');
+
+    if (toggleButton && filtrosContainer) {
+
+        toggleButton.addEventListener('click', function() {
+            filtrosContainer.classList.add('filtros-visiveis');
+        });
+    }
+
+    const limparButton = document.querySelector('.btn-limpar-filtros');
+    if (limparButton && filtrosContainer) {
+        limparButton.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                filtrosContainer.classList.remove('filtros-visiveis');
+            }
+        });
+    }
+
 });
