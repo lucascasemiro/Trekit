@@ -15,13 +15,22 @@
 
 body {
     font-family: 'Regular';
-    background-color: var(--light-white);
     margin: 0;
-    color: var(--preto);
-    background-color: var(--light-white);
+    color: var(--preto) !important;
+    background-color: var(--light-white) !important;
     padding-top: 6rem;
 }
-
+input:focus {
+    outline: none;
+    border: none;
+  
+  }
+  input{
+      font-family: 'Regular';
+      font-weight: 200;
+      color: var;
+  }
+  
   
   *{
       margin: 0%;    
@@ -38,7 +47,7 @@ header {
     width: 100%;
     top: 0;
     position: fixed;
-    background-color: #F2F8F3;
+    background-color: var(--light-white);
     z-index: 1000;
 }
 
@@ -197,11 +206,19 @@ header {
       display: inline-block;
       margin-left: 1.063rem;
       margin-top: 1.063rem;
-      font-weight: bold;
+      font-weight: 600;
   }
   .content_infos{
       margin-left: 1.063rem;
-  }
+      display: flex;
+      align-items:center;
+      margin-top: 0.2rem;
+      font-weight: 400;
+  
+    }
+    .content_infos img{
+        margin-right: 0.5rem;
+    }
   .localizacao{
       background-color: #E2E8E4;
       width: 109.015%;
@@ -356,7 +373,11 @@ header {
   }
   .nome_trilha_OT{
       font-size: 1.1rem;
-      font-weight: 600;
+      font-weight: 500;
+  }
+  .by{
+    font-weight: 300;
+    color:var(--border-color);
   }
   .avaliacao_OT img{
       width: 6.108rem;
@@ -383,12 +404,18 @@ header {
       width: 100%;
       border-radius: 1rem;
       border: none;
+      padding: 1rem;
+      padding-left: 2rem;
       background-color: #E2E8E4;
       margin-bottom: 1.125rem;
   }
+  .input_comentario:focus{
+    outline: none;
+    border: none;
+  }
   .input_comentario::placeholder{
-      padding-left: 1rem;
-      padding-top: 1rem !important;
+      padding-left: 0.1rem;
+      padding-top: -0.2rem !important;
   }
   .botoes_comentarios{
       display: flex;
@@ -405,10 +432,17 @@ header {
       color: white;
       background-color:#2FAC66;
       border: none ;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
   
   }
   .botao_cancelar{
-      border: 0.1rem solid;
+      border: 0.5px solid var(--border-color);
+      color: var(--preto);
+      background-color: var(--light-white);
+      margin-right: 1.5rem;
   }
 
 
